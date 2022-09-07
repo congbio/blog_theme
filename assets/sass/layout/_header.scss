@@ -1,0 +1,165 @@
+ 
+
+.header {
+  height: 73px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  line-height: 32.4px;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  z-index: 99999;
+  box-shadow: $box_shadow_main_button;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  .fa-times {
+    color: white;
+    display: none;
+  }
+  .logo {
+    font-size: 2.3vw;
+    a {
+      color: $main_font_color;
+    }
+  }
+  .nav_icon {
+    width: 75%;
+    justify-content: space-between;
+    display: flex;
+  }
+  .menu {
+    display: flex;
+    line-height: 32.4px;
+    list-style-type: none;
+    a {
+      color: #343434;
+      font-family: Open Sans;
+      font-size: 1.5vw;
+      line-height: 31.35px;
+      padding: 12px;
+      text-align: left;
+    }
+  }
+  nav.primary-menu {
+ 
+    li {
+      margin: 20px 0;
+    }
+  }
+  &_icon {
+    line-height: 64px;
+    text-align: right;
+    i {
+      color: $main_font_color;
+      margin: 0px 5px;
+    }
+  }
+  &__bars {
+    display: none;
+    font-size: 1.4vw;
+    color: $main_font_color;
+  }
+}
+
+@media (max-width: 739px) {
+  i.fa.fa-times {
+    display: block;
+    text-align: right;
+    padding: 5px;
+
+    margin-right: 22px;
+    cursor: pointer;
+  }
+  i.fa.fa-times :hover {
+    background-color: white;
+  }
+  .header {
+    text-align: center;
+    background-color: black;
+
+    .menu {
+      display: block;
+      position: relative;
+    }
+
+    &_icon {
+      text-align: center;
+    }
+    &__bars {
+      display: block;
+      font-size: 3vw;
+    }
+  }
+
+  .primary-menu ul li:hover {
+    background-color: white;
+    color: black;
+  }
+  .header_icon a i:hover {
+    color: green;
+  }
+
+  .primary-menu,
+  .header_icon {
+    background-color: black;
+    color: white;
+    a {
+      font-weight: 700;
+      font-size: 2vw;
+    }
+  }
+  .header .nav_icon {
+    padding-top: 20px;
+    display: none;
+
+    width: 70%;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 740px) and (max-width: 1023px) {
+  .header {
+    .nav_icon {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+    }
+    &_icon {
+      display: inline-block;
+      position: absolute;
+      top: 72px;
+      right: -2px;
+      height: 100%;
+      background-color: white;
+      z-index: 999;
+      opacity: 0.5;
+      a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+      }
+      a:hover {
+        z-index: 9999;
+        color: black;
+      }
+    }
+  }
+}
+
+@keyframes mymoveleft {
+  from {
+    right: -50%;
+  }
+  to {
+    right: 0%;
+  }
+}
